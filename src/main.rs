@@ -11,6 +11,8 @@ use learn_os::println;
 pub extern "C" fn _start() -> ! {
     println!("Hello world{}", "!");
 
+    learn_os::init();
+
     #[cfg(test)]
     test_main();
 
